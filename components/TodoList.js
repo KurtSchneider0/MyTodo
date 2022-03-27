@@ -61,18 +61,18 @@ export default function TodoList() {
           deleteTodo={() => deleteTodo(todo.id)}
         />
       ))}
-      {todos.filter((todo) => todo.complete).length !== 0 ? (
-        <Button
-          onPress={deleteAllCompleteTodos}
-          title="Alle fertigen löschen"
-          color="#841584"
-          accessibilityLabel="Filter"
-          style={styles.button}
-        />
-      ) : (
-        <Text></Text>
-      )}
       <View style={{ display: 'flex' }}>
+        {todos.filter((todo) => todo.complete).length !== 0 ? (
+          <Button
+            onPress={deleteAllCompleteTodos}
+            title="Alle fertigen löschen"
+            color="#841584"
+            accessibilityLabel="Filter"
+            style={styles.button}
+          />
+        ) : (
+          <Text></Text>
+        )}
         <Text style={styles.text}>{"\n"}Sortieren</Text>
         <Button
           onPress={() => changeFilter('all')}
