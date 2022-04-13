@@ -61,7 +61,7 @@ export default function TodoList() {
           deleteTodo={() => deleteTodo(todo.id)}
         />
       ))}
-      <View style={{ display: 'flex' }}>
+      <View>
         {todos.filter((todo) => todo.complete).length !== 0 ? (
           <Button
             onPress={deleteAllCompleteTodos}
@@ -108,11 +108,9 @@ const styles = StyleSheet.create({
     marginRight: 50,
   },
   button: {
-    margin: 10,
-    padding: 100
   },
   text: {
-    fontSize: 20,
+    fontSize: 25,
     fontStyle: "bold",
     alignSelf: "center",
   }

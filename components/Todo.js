@@ -7,6 +7,7 @@ export default (props) => (
     <Text
       onPress={props.toggleComplete}
       style={{
+        fontSize: 16,
         textDecorationLine: props.todo.complete ? 'line-through' : '',
       }}>
       {props.todo.text}
